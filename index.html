@@ -57,6 +57,7 @@
             p {
                 font-size: 20px;
             }
+		
         }
 
 img {
@@ -66,19 +67,31 @@ img {
             margin: 10px 0; /* Optional: Add spacing */
         }
 
-/* Flexbox container for side-by-side images */
-        .image-container {
-            display: flex; /* Enable Flexbox */
-            justify-content: space-between; /* Space images evenly */
-            gap: 10px; /* Add spacing between images */
-            margin: 20px 0; /* Add margin above and below the container */
-        }
+/* Default styles for all devices */
+.image-container {
+    display: flex; /* Enable Flexbox */
+    flex-direction: column; /* Stack images vertically by default */
+    gap: 10px; /* Add spacing between images */
+    margin: 20px 0; /* Add margin above and below the container */
+}
 
-        /* Optional: Adjust image width */
-        .image-container img {
-            width: 48%; /* Each image takes up 48% of the container width */
-        }
+.image-container img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
 
+/* Styles for laptops and larger screens */
+@media (min-width: 1024px) {
+    .image-container {
+        flex-direction: row; /* Display images side by side */
+        justify-content: center; /* Center the images horizontally */
+    }
+
+    .image-container img {
+        width: 48%; /* Set image width to 48% (leaves a small gap) */
+    }
+}
     </style>
 </head>
 
