@@ -18,12 +18,13 @@
             text-align: center;
         }
         header, footer {
-            background-color: #333;
-            color: white;
+            background-color: #f500ff;
+            color: #00ff29;
             padding: 10px 0;
         }
         main {
             padding: 20px;
+		background: black;
         }
 
         /* Responsive design using media queries */
@@ -56,17 +57,46 @@
                 font-size: 20px;
             }
         }
+
+img {
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            margin: 10px 0; /* Optional: Add spacing */
+        }
+
+/* Flexbox container for side-by-side images */
+        .image-container {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-between; /* Space images evenly */
+            gap: 10px; /* Add spacing between images */
+            margin: 20px 0; /* Add margin above and below the container */
+        }
+
+        /* Optional: Adjust image width */
+        .image-container img {
+            width: 48%; /* Each image takes up 48% of the container width */
+        }
+
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>100% päihteettömästi ekstaasiin</h1>
     </header>
-    <main>
-        <p>This is a simple responsive website.</p>
+    
+
+<main>
+        
+<div class="image-container">
+    <img src="images/green.png" alt="Image 1">
+    <img src="images/pink.png" alt="Image 2">
+</div>
+
     </main>
     <footer>
-        <p>&copy; 2023 My Website</p>
+        <p>&copy; 2025 EKSTASIZATION Rave Club</p>
     </footer>
 </body>
 </html>
